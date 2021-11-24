@@ -10,8 +10,9 @@ import FirebaseFirestore
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var movieTitle: UITextField!
-    @IBOutlet weak var time: UITextField!
+    @IBOutlet weak var movieTitl: UITextField!
+    
+    @IBOutlet weak var runTime: UITextField!
     
     let db = Firestore.firestore()
     
@@ -49,7 +50,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        let info:[String:Any] = ["title":"OK","time":90]
+        
+        guard let timeLab = runTime.text, let movieTitle = movieTitl.text else {
+            print("Enter something better, please ")
+            return
+        }
+        
+        guard let runninTime = Int(timeLab) else {
+            print("OK")
+            return
+        }
+        
+        let info:[String:Any] = ["title":movieTitle,"time":runninTime]
         
         db.collection("movies").addDocument(data: info){
             error in
