@@ -75,8 +75,18 @@ class ViewController: UIViewController {
     
     
     @IBAction func update(_ sender: Any) {
+        guard let timeLab = runTime.text, let movieTitle = movieTitl.text, let docId = Id.text else {
+            print("Enter something better, please ")
+            return
+        }
         
-        db.collection("movies").document("EMWxeSz1wjgj5vIz80jF").setData(["title":"Dog"])
+        guard let runninTime = Int(timeLab) else {
+            print("OK")
+            return
+        }
+        
+        
+        db.collection("movies").document(docId).setData(["title":movieTitle,"time": runninTime])
     }
     
 }
