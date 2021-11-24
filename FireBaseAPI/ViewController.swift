@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var movieTitl: UITextField!
     
+    @IBOutlet weak var Id: UITextField!
     @IBOutlet weak var runTime: UITextField!
     
     let db = Firestore.firestore()
@@ -71,5 +72,12 @@ class ViewController: UIViewController {
             print("Doc is ok")
         }
     }
+    
+    
+    @IBAction func update(_ sender: Any) {
+        
+        db.collection("movies").document("EMWxeSz1wjgj5vIz80jF").setData(["title":"Dog"])
+    }
+    
 }
 
