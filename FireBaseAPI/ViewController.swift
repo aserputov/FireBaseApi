@@ -31,6 +31,15 @@ class ViewController: UIViewController {
                 return
             }
             print(results!.count)
+            
+            for document in results!.documents{
+//                print(document.documentID)
+//                print(document.data())
+                let dc = document.data()
+                print(dc["time"])
+                print(dc["title"])
+            }
+         
         }
             
             
