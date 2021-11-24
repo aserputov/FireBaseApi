@@ -49,6 +49,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
+        let info:[String:Any] = ["title":"OK","time":90]
+        
+        db.collection("movies").addDocument(data: info){
+            error in
+            if let err = error{
+                print(err)
+            }
+            print("Doc is ok")
+        }
     }
 }
 
