@@ -89,5 +89,22 @@ class ViewController: UIViewController {
         db.collection("movies").document(docId).setData(["title":movieTitle,"time": runninTime])
     }
     
+    
+    @IBAction func Delete(_ sender: Any) {
+        guard let docId = Id.text else {
+            print("Enter something better, please ")
+            return
+        }
+        
+        db.collection("movies").document(docId).delete { error in
+            if let err = error{
+                print(err)
+                return
+            }
+            print("Delete ok")
+        }
+        
+    }
+    
 }
 

@@ -56,6 +56,14 @@
                                     <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIV-Sp-qq5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-lS-ywF">
+                                <rect key="frame" x="185" y="254" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="Delete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJ2-iO-HEW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
