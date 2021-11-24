@@ -16,37 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwQ-8s-lc4">
-                                <rect key="frame" x="127" y="114" width="161" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwQ-8s-lc4">
+                                <rect key="frame" x="191" y="114" width="32" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whH-Wk-MTI">
-                                <rect key="frame" x="133" y="175" width="149" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whH-Wk-MTI">
+                                <rect key="frame" x="133" y="175" width="148" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-vX-hwN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-vX-hwN">
                                 <rect key="frame" x="101" y="254" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SAVE"/>
                                 <connections>
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ae4-zh-KwP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-dg-TA4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-dg-TA4">
                                 <rect key="frame" x="289" y="254" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="GET"/>
                                 <connections>
-                                    <action selector="get:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEm-yY-qGM"/>
+                                    <action selector="get:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQ5-Xi-4o0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="whH-Wk-MTI" firstAttribute="top" secondItem="dwQ-8s-lc4" secondAttribute="bottom" constant="27" id="6Ar-eN-RU8"/>
+                            <constraint firstItem="whH-Wk-MTI" firstAttribute="centerX" secondItem="dwQ-8s-lc4" secondAttribute="centerX" id="CGY-C6-onX"/>
+                            <constraint firstItem="whH-Wk-MTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="Spm-EG-Hl5"/>
+                            <constraint firstItem="Pke-vX-hwN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="YKV-8H-W5z"/>
+                            <constraint firstItem="wQA-dg-TA4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pke-vX-hwN" secondAttribute="trailing" constant="8" symbolic="YES" id="ZQ0-yM-alV"/>
+                            <constraint firstItem="Pke-vX-hwN" firstAttribute="top" secondItem="whH-Wk-MTI" secondAttribute="bottom" constant="45" id="eiv-Te-5AH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pke-vX-hwN" secondAttribute="bottom" constant="578" id="jMJ-FG-xyE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wQA-dg-TA4" secondAttribute="trailing" constant="95" id="jSQ-lz-DNR"/>
+                            <constraint firstItem="whH-Wk-MTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nGk-G1-eK4"/>
+                            <constraint firstItem="Pke-vX-hwN" firstAttribute="baseline" secondItem="wQA-dg-TA4" secondAttribute="baseline" id="yHL-Pl-eMY"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="movieTitle" destination="dwQ-8s-lc4" id="UjE-9D-Dj6"/>

@@ -17,17 +17,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ok ")
         // Do any additional setup after loading the view.
     }
 
     @IBAction func get(_ sender: Any) {
-        db.collection("movies").getDocuments { queryResults, error in
+//        print("Place a string here, and a variable ")
+     
+        db.collection("movies").getDocuments { (results, error) in
             if let err = error{
+                print("shot")
                 print(err)
                 return
             }
-            print(queryResults!.count)
+            print(results!.count)
         }
+            
+            
+    
+            
+       
     }
     
     @IBAction func save(_ sender: Any) {
